@@ -57,11 +57,19 @@ export const CardHeader = styled.div`
     .title {
         display: flex;
         align-items: baseline;
-        margin-left: 1rem;
 
-        svg {
+        .upload {
             color: #3da9cb;
+            margin-left: 1rem;
         }
+
+        .info-circle{
+            color: lightgray;
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+
+
     }
 `
 
