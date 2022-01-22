@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Card = styled.section`
     display: grid;
-    width: 35rem;
+    width: 45rem;
     background-color: white;
     box-shadow: 0px 3px 6px #00000029; 
     border-radius: 10px;
@@ -39,12 +39,36 @@ export const Card = styled.section`
         font-weight: 500;   
     }
 
+    @media only screen and (max-width: 900px){
+        height: 20rem;
+        width: 35rem;
+    }
+
     @media only screen and (max-width: 600px){
         display: block;
         justify-content: center;
         height: 20rem;
         width: 25rem;
         justify-content: center;
+    }
+
+    @media only screen and (max-width: 450px){
+        display: block;
+        justify-content: center;
+        height: 20rem;
+        width: 20rem;
+        justify-content: center;
+    }
+
+    @media only screen and (max-width: 325px){
+        display: block;
+        justify-content: center;
+        height: 16rem;
+        width: 15rem;
+        justify-content: center;
+        p, h2, h3 {
+            font-size: 1rem;
+        }
     }
 `
 
@@ -113,14 +137,21 @@ export const UserSpace = styled.div`
     p {
         color: gray;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        text-align: initial;
+    }
+
+    .symbol {
+        p {
+            text-align: center;
+        }
     }
 
     @media only screen and (max-width: 600px){
         h1 {
             font-size: 1.2rem;
         }
-        .symbol, p{
+        .symbol, p, .email-icon{
             display: none;
         }
         
@@ -146,11 +177,25 @@ export const UserInfo = styled.div`
     }
 
     .email {
+        p {
+            font-weight: bold;
+        }
+        .user-stats{
+            display: grid;
+            grid-template-columns: 0.2fr 1fr 1fr;
+            gap: 0.4rem;
+
+        }
+
         p{
             margin: 0;
             font-size: 0.8rem;
             color: gray;
             text-align: left;
+        }
+
+        .email-icon{
+            color: gray;
         }
     }
     
